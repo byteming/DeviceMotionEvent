@@ -1,0 +1,20 @@
+{
+    "slideTitle": "People",
+    "slides":[
+        {
+            "name":"Mr",
+            "src":"/assets/images/haik.jpg"
+        }
+        ,
+        {
+            "name":"ir",
+            "src":"/assets/images/haik.jpg"
+        }
+        ,
+        {
+            "name":"M",
+            "src":"/assets/images/haik.jpg"
+        }
+    ]
+}
+    
