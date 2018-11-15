@@ -1,0 +1,31 @@
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {SlideDataService} from '../slide-data.service';
+import { Slide, Slides } from '@ionic/angular';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+})
+export class HomePage implements OnInit{
+
+  myText:String = "name unkonown"
+  isAtEndSlides:boolean = true;
+  @ViewChild('ourSlide') slides : Slides;
+
+  moveSlide(){
+    this.slides.slideNext;
+  }
+  constructor(private myData : SlideDataService){}
+
+  ngOnInit(){
+    this.loadData();
+  }
+  setEdnofSlides(state){
+    this.isAtEndSlides = state;
+  }
+
+  loadData(){
+    this.myText =this.myData.getMyName();
+  }
+}
